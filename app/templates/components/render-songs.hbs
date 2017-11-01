@@ -1,0 +1,12 @@
+{{#each data.songs as |song|}}
+
+  {{audio-single
+    title=song.title
+    artist=song.artist
+    src=song.src
+    tags=song.tags
+    img_url=song.imgurl}}
+
+{{/each}}
+
+{{yield}}
