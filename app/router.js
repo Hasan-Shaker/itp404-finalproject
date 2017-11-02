@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('feed', { path: '/' });
+  this.route('clips', { path: '/c/:clipid' });
 });
 
 export default Router;

@@ -1,9 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  actions:{
+setActive(id){
+this.sendAction('test', id);
+return true;
+}
+  },
   data: {
 
     songs: [{
+      id: uuid(),
         title: "Song Name 1",
         artist: "@aidan",
         src: "https://www.dropbox.com/s/u497xpq7qbrt2l9/justbeatitbuddy.wav?dl=1",
@@ -11,12 +18,14 @@ export default Ember.Component.extend({
         imgurl: "https://source.unsplash.com/random/" + uuid()
       },
       {
+        id: uuid(),
         title: "Song Name 2",
         artist: "@baedan",
         src: "https://www.dropbox.com/s/p26y5uk5b8ek3yd/P.Y.T.%20%28Pretty%20Young%20Thing%29_y32ejtuxSjM_youtube%20R.wav?dl=1",
         tags: ["Podcast", "News"]
       },
       {
+        id: uuid(),
         title: "Song Name 3",
         artist: "@aidan",
         src: "https://www.dropbox.com/s/u497xpq7qbrt2l9/justbeatitbuddy.wav?dl=1",
@@ -24,12 +33,14 @@ export default Ember.Component.extend({
         imgurl: "https://source.unsplash.com/random/" + uuid()
       },
       {
+        id: uuid(),
         title: "Song Name 4",
         artist: "@aidan",
         src: "https://www.dropbox.com/s/u497xpq7qbrt2l9/justbeatitbuddy.wav?dl=1",
         tags: ["Radio", "Narrative"],
         imgurl: "https://source.unsplash.com/random/" + uuid()
       },{
+        id: uuid(),
           title: "Song Name 1",
           artist: "@aidan",
           src: "https://www.dropbox.com/s/u497xpq7qbrt2l9/justbeatitbuddy.wav?dl=1",
@@ -37,12 +48,14 @@ export default Ember.Component.extend({
           imgurl: "https://source.unsplash.com/random/" + uuid()
         },
         {
+          id: uuid(),
           title: "Song Name 2",
           artist: "@baedan",
           src: "https://www.dropbox.com/s/p26y5uk5b8ek3yd/P.Y.T.%20%28Pretty%20Young%20Thing%29_y32ejtuxSjM_youtube%20R.wav?dl=1",
           tags: ["Podcast", "News"]
         },
         {
+          id: uuid(),
           title: "Song Name 3",
           artist: "@aidan",
           src: "https://www.dropbox.com/s/u497xpq7qbrt2l9/justbeatitbuddy.wav?dl=1",
@@ -50,6 +63,7 @@ export default Ember.Component.extend({
           imgurl: "https://source.unsplash.com/random/" + uuid()
         },
         {
+          id: uuid(),
           title: "Song Name 4",
           artist: "@aidan",
           src: "https://www.dropbox.com/s/u497xpq7qbrt2l9/justbeatitbuddy.wav?dl=1",

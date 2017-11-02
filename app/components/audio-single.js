@@ -9,6 +9,8 @@ export default Ember.Component.extend({
   },
   didInsertElement() {
 
+    this.player_global = document.querySelector("audio#aud_main");
+
     this.player = this.$('audio')[0];
     this.playerbutton = this.$('.playerbutton')[0];
     this.playertime = this.$('.player_time')[0];
@@ -52,6 +54,13 @@ export default Ember.Component.extend({
     playAud: function() {
 
       if (this.player.paused && !this.player.ended && this.player.buffered) {
+
+        console.log("id: ", this.attrs.id.value);
+
+        // this.sendAction('setActive', {data: this.attrs.id.value, player: this.player });
+
+
+
         this.playerbutton.innerHTML = "pause";
         this.data.playing = true;
         this.data.playing ? this.player.play() : this.player.pause();
@@ -60,7 +69,9 @@ export default Ember.Component.extend({
         this.data.playing = false;
         this.data.playing ? this.player.play() : this.player.pause();
       }
+
     }
+
   }
 
 });
