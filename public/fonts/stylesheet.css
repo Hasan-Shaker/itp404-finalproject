@@ -369,3 +369,13 @@
     font-weight: 100;
     font-style: italic;
 }
+
+@font-face {
+    font-family: 'Sharp Grotesk Bold 10';
+    src: url('SharpGroteskBold10-Regular.eot');
+    src: url('SharpGroteskBold10-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SharpGroteskBold10-Regular.woff') format('woff'),
+        url('SharpGroteskBold10-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

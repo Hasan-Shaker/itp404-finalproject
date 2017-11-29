@@ -1,3 +1,6 @@
+<div class="songflex">
+
+
 {{#each data.songs as |song|}}
 
   {{audio-single
@@ -7,8 +10,11 @@
     tags=song.tags
     img_url=song.imgurl
     id=song.id
+    playerColor=song.playercolor
     setActive="setActive"}}
 
 {{/each}}
+
+</div>
 
 {{yield}}

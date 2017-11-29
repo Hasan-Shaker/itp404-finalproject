@@ -2,6 +2,7 @@ body, html {
   font-size: 16px;
   background-color: white;
   margin: 0;
+  font-family: "Theinhardt",sans-serif;
 }
 
 @media only screen and (max-width: 767px) {
@@ -16,7 +17,10 @@ body, html {
   }
   .logo-header {
     margin: 0 !important;
-    font-size: 1.1em !important;
+    font-family: "Sharp Grotesk Bold 10";
+font-size: 1.3em !important;
+text-transform: uppercase;
+    margin-bottom: -.1em !important;
   }
   .title {
 
@@ -39,6 +43,29 @@ body, html {
   }
 
 }
+
+
+@media only screen and (max-width: 800px) {
+  body, html {
+    font-size: 22px;
+  }
+  .songflex > .ember-view {
+    /*position: relative;
+    top:0;
+    min-width: 100%;*/
+    padding: 0;
+    padding-bottom: 0.2em;
+
+    flex-basis: 100% !important;
+    box-sizing: border-box;
+    flex-grow: 1;
+
+    /*transition: min-width 1s ease-in-out, top 1s ease-in-out;*/
+  }
+}
+
+
+
 
 audio#aud_main{
 
@@ -77,7 +104,7 @@ color: black;
 
 .header-inner {
 
-  font-family: "Haas Grot Disp 65";
+  /* font-family: "Theinhardt"; */
   max-width: 1100px;
   margin: 0px auto;
   padding: .5em;
@@ -100,7 +127,7 @@ color: black;
 }
 .footer-inner {
 
-  font-family: "Haas Grot Disp 65";
+  /* font-family: "Haas Grot Disp 65"; */
   max-width: 1100px;
   margin: 0px auto;
   padding: .2em;
@@ -111,18 +138,19 @@ color: black;
 }
 
 .song-holder.has_bg {
-  padding-top: 4em;
+  padding-top: 3.5em;
   background-size: cover !important;
   background-position: center !important;
-  border-radius: 7px;
+
 }
 
 .song-holder{
-  /* Rectangle 2: */
-background-image: linear-gradient(-197deg, #FF0086 2%, #E7359D 22%, #CC4AB5 41%, #AA58CD 61%, #7C64E6 80%, #006DFF 100%);
+
+/* background-image: linear-gradient(-197deg, #FF0086 2%, #E7359D 22%, #CC4AB5 41%, #AA58CD 61%, #7C64E6 80%, #006DFF 100%); */
+background-image: linear-gradient(-197deg, #a900ff 2%, #de4fff 100%);
   padding: .7em;
-    padding-top: 3em;
-  border-radius: 7px;
+    padding-top: 3.5em;
+  border-radius: 3px;
 }
 
 /*.song-holder.has_bg .title {
@@ -137,7 +165,10 @@ background-image: linear-gradient(-197deg, #FF0086 2%, #E7359D 22%, #CC4AB5 41%,
 
 .logo-header {
   margin-right: 1em;
-  font-size: 1.2em;
+  font-size: 1.9em;
+  text-transform: uppercase;
+  font-family: "Sharp Grotesk Bold 10";
+  margin-bottom: -.115em !important;
 }
 
 .search-header input[type="text"] {
@@ -164,6 +195,7 @@ background-image: linear-gradient(-197deg, #FF0086 2%, #E7359D 22%, #CC4AB5 41%,
 
 .bodymain {
   max-width: 1100px;
+  width: 100%;
   margin: 0px auto;
 }
 
@@ -215,7 +247,7 @@ background-image: linear-gradient(-197deg, #FF0086 2%, #E7359D 22%, #CC4AB5 41%,
 }
 
 .title {
-  font-family: "Haas Grot Disp 65";
+  /* font-family: "Haas Grot Disp 65"; */
   font-size: 1.2em;
   /*font-weight: bold;*/
   margin-bottom: .6em;
@@ -227,8 +259,13 @@ background-image: linear-gradient(-197deg, #FF0086 2%, #E7359D 22%, #CC4AB5 41%,
   transform: translateY(-50%);
   color: silver;
   top: -1px;
-  left: 2px;
   font-weight: 400;
+  /* left: 2px; */
+
+  left: 8px;
+  padding-left: 4px;
+  font-weight: 400;
+  border-left: 1px solid white;
 }
 
 .data {
@@ -240,7 +277,7 @@ background-image: linear-gradient(-197deg, #FF0086 2%, #E7359D 22%, #CC4AB5 41%,
   border-radius: 3px;
   background-color: #020202;
   color: white;
-  font-family: "Fira Code";
+  font-family: "IBM Plex Mono";
   font-weight: 500;
   font-size: .8em;
   padding: .4em;
@@ -262,13 +299,39 @@ ul.playlist {
   border-radius: 3px;
 }
 
+.songflex > .ember-view {
+  /*position: relative;
+  top:0;
+  min-width: 100%;*/
+  padding: 0;
+  padding-bottom: 0.2em;
+
+  flex-basis: 33.3%;
+  box-sizing: border-box;
+  flex-grow: 1;
+  /*transition: min-width 1s ease-in-out, top 1s ease-in-out;*/
+}
+
 .song {
   /*position: relative;
   top:0;
   min-width: 100%;*/
   padding: 1em;
   padding-bottom: 0.2em;
+  /* flex-basis: 33.3%; */
+  width: 100%;
+  box-sizing: border-box;
+  /* flex-grow: 1; */
+
   /*transition: min-width 1s ease-in-out, top 1s ease-in-out;*/
+}
+
+.songflex{
+
+display: flex;
+width: 100%;
+flex-wrap: wrap;
+
 }
 
 /*.song.expanded {
@@ -334,7 +397,7 @@ li.playlist-item {
   position: relative;
   top: -3.5px;
   font-size: .9em;
-  font-family: "Haas Grot Disp 65";
+  /* font-family: "Haas Grot Disp 65"; */
   /* font-weight: 600; */
 }
 
@@ -348,7 +411,7 @@ li.playlist-item {
 }
 
 .iconholder {
-  display: inline-block;
+  display: flex;
   padding: .4em;
   color: silver;
 }
@@ -377,13 +440,13 @@ li.playlist-item {
 
 /* Slider */
 
-input[type=range] {
+input.seek[type=range] {
   -webkit-appearance: none;
   cursor: pointer;
   background-color: transparent;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+input.seek[type=range]::-webkit-slider-runnable-track {
   width: 300px;
   height: 5px;
   background: violet;
@@ -391,7 +454,7 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: 3px;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input.seek[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
   height: 16px;
@@ -401,13 +464,14 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -5px;
 }
 
-input[type=range]:focus {
+input.seek[type=range]:focus {
   outline: none;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
+input.seek[type=range]:focus::-webkit-slider-runnable-track {
   background: violet;
 }
+
 
 
 /*Spinners*/
@@ -439,4 +503,73 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   /*border-right-color: transparent;
   border-bottom-color: transparent;*/
   animation: spinner .6s linear infinite;
+}
+
+
+.song-holder[data-color="red"] input.seek[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #9B1F58;
+  border: none;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="red"] .player {
+  background-color: #E10651;
+  padding: 3px;
+  /*position: relative;*/
+  display: flex;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="red"]{
+
+  background-image: linear-gradient(-134deg, #FF95B2 15%, #FF9A84 100%);
+
+}
+
+
+.song-holder[data-color="yellow"] input.seek[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #ffbf00;
+  border: none;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="yellow"] .player {
+  background-color: #ffd900;
+  padding: 3px;
+  /*position: relative;*/
+  display: flex;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="yellow"]{
+
+background-image: linear-gradient(140deg, #ffae59 0%, #ff7796 100%);
+
+}
+
+.song-holder[data-color="green"] input.seek[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #00A6FF;
+  border: none;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="green"] .player {
+      background-color: #0e4b49;
+
+  padding: 3px;
+  /*position: relative;*/
+  display: flex;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="green"]{
+
+background-image: linear-gradient(140deg, #c1d7a4 0%, #68ffdc 100%);
+
 }
