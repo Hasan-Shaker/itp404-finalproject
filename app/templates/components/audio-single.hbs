@@ -1,0 +1,49 @@
+<div class="song" >
+
+<div class="song-holder" data-color={{playerColor}}>
+
+<div class="title"><a class="nostyle" href="/c/{{id}}">{{title}}</a><span class="artist"> {{artist}}</span></div>
+
+
+<div class="player">
+
+  <div class="playerbutton" onclick={{action 'playAud'}}>play_arrow</div>
+
+<input class="seek" value="0" min="0" max="1000" step="1" type="range">
+
+<span class="player_time"><i class="spinner"></i></span>
+<audio preload={{data.preload}}>
+  <source src={{src}} type={{data.type}}>
+</audio>
+
+</div>
+</div>
+
+
+<div class="data">
+<div class="iconholder">
+<span class="action-icon">favorite_outline</span>
+<span class="action-icon">repeat</span>
+<span class="action-icon">&#xE03B;</span>
+</div>
+<div class="tagholder">
+  {{#each tags as |tag|}}
+<span class="tag">{{tag}}</span>
+{{/each}}
+</div>
+</div>
+<!--
+<div class="song-details">
+  <h3>Details</h3>
+  <p>Details</p>
+  <p>Details</p>
+  <p>Details</p>
+  <p>Details</p>
+  <p>Details</p>
+  <p>Details</p>
+  <p>Details</p>
+</div> -->
+
+</div>
+
+{{yield}}
