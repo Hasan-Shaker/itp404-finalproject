@@ -1,0 +1,92 @@
+
+
+
+.song-holder{
+  /* Rectangle 2: */
+background-image: linear-gradient(-197deg, #FF0086 2%, #E7359D 22%, #CC4AB5 41%, #AA58CD 61%, #7C64E6 80%, #006DFF 100%);
+  padding: .7em;
+    padding-top: 3.5em;
+  border-radius: 7px;
+}
+
+.player {
+  background-color: #0000ff;
+  padding: 3px;
+  /*position: relative;*/
+  display: flex;
+  border-radius: 3px;
+}
+
+.footer-player {
+  background-color: transparent;
+  padding: 3px;
+  flex-grow: 1;
+  display: flex;
+  border-radius: 3px;
+}
+
+.playerbutton {
+  font-size: 1.2em;
+  display: inline-block;
+  color: white;
+  padding: .4em;
+  cursor: pointer;
+  font-family: "Material Icons";
+}
+
+.player_time {
+  padding: .6em;
+  display: table-cell;
+  vertical-align: middle;
+  /* position: absolute; */
+  top: 2px;
+  color: white;
+  font-size: .8em;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  position: relative;
+}
+
+.seek {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.title {
+  font-family: "Haas Grot Disp 65";
+  font-size: 1.2em;
+  /*font-weight: bold;*/
+  margin-bottom: .6em;
+}
+
+.artist {
+  font-size: .8em;
+  position: relative;
+  transform: translateY(-50%);
+  color: silver;
+  top: -1px;
+  left: 2px;
+  font-weight: 400;
+}
+
+.data {
+  padding-top: .5em;
+  display: flex;
+}
+
+.tag {
+  border-radius: 3px;
+  background-color: #020202;
+  color: white;
+  font-family: "Fira Code";
+  font-weight: 500;
+  font-size: .8em;
+  padding: .4em;
+  margin-left: .4em;
+  padding-left: .8em;
+  padding-right: .8em;
+  box-sizing: border-box;
+  display: inline-block;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+  text-transform: capitalize;
+}

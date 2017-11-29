@@ -1,0 +1,575 @@
+body, html {
+  font-size: 16px;
+  background-color: white;
+  margin: 0;
+  font-family: "Theinhardt",sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+  body, html {
+    font-size: 20px;
+  }
+  .header-inner{
+    justify-content: center;
+  }
+  .search-header{
+    display: none;
+  }
+  .logo-header {
+    margin: 0 !important;
+    font-family: "Sharp Grotesk Bold 10";
+font-size: 1.3em !important;
+text-transform: uppercase;
+    margin-bottom: -.1em !important;
+  }
+  .title {
+
+    margin-bottom: calc(.6em - 4px) !important;
+  }
+
+  .header-pad{
+    padding-top: 2.5em !important;
+  }
+  .song.expanded {
+    width: 100%;
+    padding: 1em !important;
+    padding-bottom: 0.2em !important;
+    position: absolute !important;
+    top: 0 !important;
+    z-index: 1002;
+    box-sizing: border-box;
+    left: 0 !important;
+    transform: translate(0,0) !important;
+  }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+  body, html {
+    font-size: 22px;
+  }
+  .songflex > .ember-view {
+    /*position: relative;
+    top:0;
+    min-width: 100%;*/
+    padding: 0;
+    padding-bottom: 0.2em;
+
+    flex-basis: 100% !important;
+    box-sizing: border-box;
+    flex-grow: 1;
+
+    /*transition: min-width 1s ease-in-out, top 1s ease-in-out;*/
+  }
+}
+
+
+
+
+audio#aud_main{
+
+display: none;
+max-height: 0px;
+}
+
+a.nostyle{
+text-decoration: none;
+color: inherit;
+}
+
+
+
+.header-pad{
+  padding-top: 4em;
+}
+
+.header {
+  background-color: #313138;
+    color: white;
+    z-index: 1000;
+}
+.header.grad{
+  background-color: white;
+  /*background-image: linear-gradient(-180deg, #EEEEEE 0%, rgba(239,239,239,0.00) 96%);*/
+color: black;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+}
+
+.header.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.header-inner {
+
+  /* font-family: "Theinhardt"; */
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: .5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.footer-bar {
+  background-color: #313138;
+    color: white;
+    z-index: 1000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+    box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.14);
+}
+.footer-inner {
+
+  /* font-family: "Haas Grot Disp 65"; */
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: .2em;
+
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.song-holder.has_bg {
+  padding-top: 3.5em;
+  background-size: cover !important;
+  background-position: center !important;
+
+}
+
+.song-holder{
+
+/* background-image: linear-gradient(-197deg, #FF0086 2%, #E7359D 22%, #CC4AB5 41%, #AA58CD 61%, #7C64E6 80%, #006DFF 100%); */
+background-image: linear-gradient(-197deg, #a900ff 2%, #de4fff 100%);
+  padding: .7em;
+    padding-top: 3.5em;
+  border-radius: 3px;
+}
+
+/*.song-holder.has_bg .title {
+  color: white;
+}*/
+
+.song-holder .title {
+  color: white;
+  margin-left: 2px;
+
+}
+
+.logo-header {
+  margin-right: 1em;
+  font-size: 1.9em;
+  text-transform: uppercase;
+  font-family: "Sharp Grotesk Bold 10";
+  margin-bottom: -.115em !important;
+}
+
+.search-header input[type="text"] {
+  background-color: #25252b;
+  padding: .45em;
+  font-size: .9em;
+  border-radius: 2px;
+  border: 0px;
+  color: white;
+}
+
+.search-header input[type="text"].outline {
+  background-color: white;
+  padding: .45em;
+  font-size: .9em;
+  border-radius: 2px;
+  border: 1px solid #ebebeb;
+  color: grey;
+}
+
+.search-header input[type="text"].outline::placeholder {
+  color: silver;
+}
+
+.bodymain {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.mi {
+  font-family: "Material Icons";
+}
+
+.player {
+  background-color: #0000ff;
+  padding: 3px;
+  /*position: relative;*/
+  display: flex;
+  border-radius: 3px;
+}
+
+.footer-player {
+  background-color: transparent;
+  padding: 3px;
+  flex-grow: 1;
+  display: flex;
+  border-radius: 3px;
+}
+
+.playerbutton {
+  font-size: 1.2em;
+  display: inline-block;
+  color: white;
+  padding: .4em;
+  cursor: pointer;
+  font-family: "Material Icons";
+}
+
+.player_time {
+  padding: .6em;
+  display: table-cell;
+  vertical-align: middle;
+  /* position: absolute; */
+  top: 2px;
+  color: white;
+  font-size: .8em;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  position: relative;
+}
+
+.seek {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.title {
+  /* font-family: "Haas Grot Disp 65"; */
+  font-size: 1.2em;
+  /*font-weight: bold;*/
+  margin-bottom: .6em;
+}
+
+.artist {
+  font-size: .8em;
+  position: relative;
+  transform: translateY(-50%);
+  color: silver;
+  top: -1px;
+  font-weight: 400;
+  /* left: 2px; */
+
+  left: 8px;
+  padding-left: 4px;
+  font-weight: 400;
+  border-left: 1px solid white;
+}
+
+.data {
+  padding-top: .5em;
+  display: flex;
+}
+
+.tag {
+  border-radius: 3px;
+  background-color: #020202;
+  color: white;
+  font-family: "IBM Plex Mono";
+  font-weight: 500;
+  font-size: .8em;
+  padding: .4em;
+  margin-left: .4em;
+  padding-left: .8em;
+  padding-right: .8em;
+  box-sizing: border-box;
+  display: inline-block;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+  text-transform: capitalize;
+}
+
+ul.playlist {
+  margin-top: .5em;
+  padding: .4em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+}
+
+.songflex > .ember-view {
+  /*position: relative;
+  top:0;
+  min-width: 100%;*/
+  padding: 0;
+  padding-bottom: 0.2em;
+
+  flex-basis: 33.3%;
+  box-sizing: border-box;
+  flex-grow: 1;
+  /*transition: min-width 1s ease-in-out, top 1s ease-in-out;*/
+}
+
+.song {
+  /*position: relative;
+  top:0;
+  min-width: 100%;*/
+  padding: 1em;
+  padding-bottom: 0.2em;
+  /* flex-basis: 33.3%; */
+  width: 100%;
+  box-sizing: border-box;
+  /* flex-grow: 1; */
+
+  /*transition: min-width 1s ease-in-out, top 1s ease-in-out;*/
+}
+
+.songflex{
+
+display: flex;
+width: 100%;
+flex-wrap: wrap;
+
+}
+
+/*.song.expanded {
+  min-width: 40%;
+  padding: 1em;
+  padding-bottom: 0.2em;
+  position: absolute;
+  float: left;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1002;
+}
+
+.song.expanded .song-holder{
+
+padding-top: 11em;
+
+}*/
+
+/*.song-details{
+
+  max-height: 0px;
+  overflow: hidden;
+  background-color: white;
+  padding: .5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: .5em;
+  transition: height .5s ease-in-out;
+}
+
+.song.expanded .song-details{
+
+  max-height: 500px;
+  overflow: visible;
+  background-color: white;
+  padding: .5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: .5em;
+
+}*/
+
+.modalbg{
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  /* mix-blend-mode: darken; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+}
+
+li.playlist-item {
+  border: 1px solid #dedede;
+  list-style: none;
+  margin-bottom: .4em;
+}
+
+.playlist-title {
+  position: relative;
+  top: -3.5px;
+  font-size: .9em;
+  /* font-family: "Haas Grot Disp 65"; */
+  /* font-weight: 600; */
+}
+
+.playlist-playerbutton {
+  font-size: 1.1em;
+  display: inline-block;
+  color: black;
+  padding: .4em;
+  cursor: pointer;
+  font-family: "Material Icons";
+}
+
+.iconholder {
+  display: flex;
+  padding: .4em;
+  color: silver;
+}
+
+.playlist-item.active {
+  background-color: #f9f9f9;
+}
+
+.action-icon {
+  font-size: 1.3em;
+  margin-right: .4em;
+  font-family: "Material Icons";
+  position: relative;
+  top: .1em;
+}
+
+.tagholder {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+  flex-grow: 1;
+  padding: .4em;
+  padding-right: 0;
+}
+
+
+/* Slider */
+
+input.seek[type=range] {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+input.seek[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: violet;
+  border: none;
+  border-radius: 3px;
+}
+
+input.seek[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: white;
+  margin-top: -5px;
+}
+
+input.seek[type=range]:focus {
+  outline: none;
+}
+
+input.seek[type=range]:focus::-webkit-slider-runnable-track {
+  background: violet;
+}
+
+
+
+/*Spinners*/
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: -.75em;
+  margin-left: -.75em;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: white;
+  /*border-right-color: transparent;
+  border-bottom-color: transparent;*/
+  animation: spinner .6s linear infinite;
+}
+
+
+.song-holder[data-color="red"] input.seek[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #9B1F58;
+  border: none;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="red"] .player {
+  background-color: #E10651;
+  padding: 3px;
+  /*position: relative;*/
+  display: flex;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="red"]{
+
+  background-image: linear-gradient(-134deg, #FF95B2 15%, #FF9A84 100%);
+
+}
+
+
+.song-holder[data-color="yellow"] input.seek[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #ffbf00;
+  border: none;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="yellow"] .player {
+  background-color: #ffd900;
+  padding: 3px;
+  /*position: relative;*/
+  display: flex;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="yellow"]{
+
+background-image: linear-gradient(140deg, #ffae59 0%, #ff7796 100%);
+
+}
+
+.song-holder[data-color="green"] input.seek[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #00A6FF;
+  border: none;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="green"] .player {
+      background-color: #0e4b49;
+
+  padding: 3px;
+  /*position: relative;*/
+  display: flex;
+  border-radius: 3px;
+}
+
+.song-holder[data-color="green"]{
+
+background-image: linear-gradient(140deg, #c1d7a4 0%, #68ffdc 100%);
+
+}
