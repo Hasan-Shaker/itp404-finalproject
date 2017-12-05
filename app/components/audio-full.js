@@ -13,6 +13,7 @@ export default Ember.Component.extend({
     Ember.set(this, "song",data[0]);
 
   });
+
 },
 actions: {
   deletePost(){
