@@ -1,0 +1,61 @@
+<h2 class="form-header">Add a Clip</h2>
+
+<form class="flex-container">
+
+<div class="input-holder">
+<label class="label-main">Clip Name</label>
+{{input value=name class="input-text" placeholder="" type="text"}}
+</div>
+<div class="input-holder">
+<label class="label-main">Creator</label>
+{{input value=creator class="input-text" placeholder="" type="text"}}
+</div>
+<div class="input-holder">
+<label class="label-main">Tags (Separate using commas)</label>
+{{input value=tags class="input-text" placeholder="Ex: Music, Hip-Hop" type="text"}}
+<!-- <span class="socicon socicon-youtube"></span> -->
+</div>
+<h3 class="form-header underline" style="flex-basis: 100%;">Audio</h3>
+<div class="input-holder">
+<label class="label-main">Audio Source</label>
+<select onchange={{action (mut source) value="target.value"}}>
+  <option value="url">Direct URL</option>
+  <option value="yt">YouTube</option>
+</select>
+</div>
+<div class="input-holder">
+<label class="label-main">Audio URL</label>
+{{input value=url class="input-text" placeholder="" type="text"}}
+<!-- <span class="socicon socicon-youtube"></span> -->
+</div>
+
+<h3 class="form-header underline" style="flex-basis: 100%;">Appearance</h3>
+
+<div class="input-holder" style="flex-basis: 100%;">
+<label class="label-main">Color</label>
+<select onchange={{action (mut color) value="target.value"}}>
+  <option value="blue">Blue</option>
+  <option value="red">Red</option>
+  <option value="yellow">Yellow</option>
+  <option value="green">Green</option>
+</select>
+</div>
+
+<div class="input-holder" >
+<label class="label-main">Image URL</label>
+{{input class="input-text" value=img type="text"}}
+</div>
+
+{{#if isYoutube}}
+<div class="input-holder" style="margin-bottom: .5em;">
+<label class="label-main" style="display: inline;">Use Youtube Thumbnail</label>
+<input type="checkbox" onchange={{action (mut useThumb) value="target.value"}}/>
+</div>
+{{/if}}
+
+<div class="input-holder" style="flex-basis: 100%;">
+<div class="button primary thicc bottom-fill" onclick={{action "getAudio"}}>Add</div>
+</div>
+
+</form>
+{{yield}}

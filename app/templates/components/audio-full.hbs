@@ -1,0 +1,29 @@
+{{audio-single
+  title=song.title
+  artist_name=song.artist_name
+  src=song.file_url
+  tags=song.tags
+  img_url=song.img_url
+  file_type=song.file_type
+  id=song.id
+  guid=song.uuid
+  playerColor=song.player_color
+  setActive="setActive"
+  play_count=song.play_count
+  size="full"}}
+
+<div class="clip-data">
+
+  <h1 class="data-header">{{song.title}}</h1>
+  <h3 class="data-header" style="font-weight: 400; color: grey;">{{song.artist_name}}</h3>
+  <h4>Created At:</h4>
+  <code>{{song.created_at}}</code>
+  <h4>Play Count:</h4>
+  <code>{{song.play_count}}</code>
+<br />
+  <div onclick={{action 'deletePost'}}  class="button secondary inline-block" style="margin-top: 1em; margin-bottom: 1em;">
+    <span class="mi solo">delete</span> Delete Clip
+  </div>
+</div>
+
+{{yield}}

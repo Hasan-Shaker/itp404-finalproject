@@ -1,8 +1,8 @@
-<div class="song" >
+<div class="song {{size}}" >
 
 <div class="song-holder" data-color={{playerColor}}>
 
-<div class="title"><a class="nostyle" href="/c/{{id}}">{{title}}</a><span class="artist"> {{artist}}</span></div>
+<div class="title"><a class="nostyle" href="/c/{{guid}}">{{title}}</a><span class="artist"> {{artist_name}}</span></div>
 
 
 <div class="player">
@@ -13,7 +13,8 @@
 
 <span class="player_time"><i class="spinner"></i></span>
 <audio preload={{data.preload}}>
-  <source src={{src}} type={{data.type}}>
+  <source src={{this.src}} type={{this.file_type}}>
+  Your device does not support HTML audio.
 </audio>
 
 </div>
@@ -21,11 +22,11 @@
 
 
 <div class="data">
-<div class="iconholder">
+<!-- <div class="iconholder">
 <span class="action-icon">favorite_outline</span>
 <span class="action-icon">repeat</span>
 <span class="action-icon">&#xE03B;</span>
-</div>
+</div> -->
 <div class="tagholder">
   {{#each tags as |tag|}}
 <span class="tag">{{tag}}</span>

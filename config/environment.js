@@ -3,7 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'musicapp',
+    modulePrefix: 'itp404-finalproject',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -30,6 +30,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.apiHost = "http://localhost:3000/api/";
+    ENV.appRoot = "http://localhost:4200/";
   }
 
   if (environment === 'test') {
@@ -44,7 +46,10 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    // ENV.rootURL = '/itp404-finalproject';
+    // ENV.locationType = 'hash';
+    ENV.apiHost = "https://itp404-finalproject.herokuapp.com/api/";
+    ENV.appRoot = "http://itp404-finalproject.surge.sh/";
   }
 
   return ENV;
